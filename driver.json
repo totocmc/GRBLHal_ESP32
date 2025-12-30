@@ -127,6 +127,23 @@
       }
     },
     {
+      "name": "GRBL CNC 6X 2025",
+      "symbol": "BOARD_GRBL_CNC_I2S_6X_2025",
+      "URL": "",
+      "MAP": "main/boards/grbl_cnc_i2s_6x_2025_map.h",
+      "caps": {
+        "axes": 6,
+        "usb_cdc": 0,
+        "serial_ports": 2,
+        "trinamic_spi_cs": 1,
+        "trinamic_spi_chain": 0,
+        "sdcard": 1,
+        "wifi": 1,
+        "bluetooth": 1,
+		"control_inputs": 0
+      }
+    },
+    {
       "name": "ESPDUINO-32 Wemos D1 R32",
       "symbol": "BOARD_ESPDUINO32",
       "MAP": "main/boards/espduino-32_wemos_d1_r32_uno_map.h ",

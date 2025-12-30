@@ -25,6 +25,7 @@
 //#define BOARD_BDRING_6X               //
 //#define BOARD_BDRING_I2S_6PACK_EXT_V2 //
 //#define BOARD_BDRING_6X_V3
+#define BOARD_GRBL_CNC_I2S_6X_2025
 //#define BOARD_ESPDUINO32              //
 //#define BOARD_SOURCERABBIT_4AXIS      //
 //#define BOARD_PROTONEER_3XX           //

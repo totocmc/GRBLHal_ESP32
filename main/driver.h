@@ -128,6 +128,8 @@ typedef struct {
   #include "boards/bdring_i2s_6x_v3_map.h"
 #elif defined(BOARD_BDRING_I2S_6PACK_EXT_V2)
   #include "boards/bdring_i2s_6pack_ext_v2_map.h"
+#elif defined(BOARD_GRBL_CNC_I2S_6X_2025)
+  #include "grbl_cnc_i2s_6x_2025_map.h"
 #elif defined(BOARD_ESPDUINO32)
   #include "boards/espduino-32_wemos_d1_r32_uno_map.h"
 #elif defined(BOARD_SOURCERABBIT_4AXIS) || defined(BOARD_SOURCERABBIT_4AXIS_12)
