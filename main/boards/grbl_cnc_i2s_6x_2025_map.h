@@ -86,7 +86,7 @@
 #define M3_STEP_PIN             I2SO(13)
 #define M3_DIRECTION_PIN        I2SO(12)
 #define M3_ENABLE_PIN           I2SO(15)
-#define M3_LIMIT_PIN            GPIO_NUM_34 // 4
+//#define M3_LIMIT_PIN            GPIO_NUM_34 // 4
 #if TRINAMIC_SPI_ENABLE
 #define MOTOR_CSM3_PIN          I2SO(14)
 #endif
@@ -116,12 +116,18 @@
 #endif
 #endif
 
-// Slot #3
 
-#define AUXOUTPUT0_PIN          GPIO_NUM_26 // 1 - Spindle PWM
-#define AUXOUTPUT1_PIN          GPIO_NUM_4  // 2 - Spindle enable
-#define AUXOUTPUT2_PIN          GPIO_NUM_16 // 3 - Spindle direction
-#define AUXOUTPUT3_PIN          GPIO_NUM_27 // 4 - Coolant mist
+// Macro pin
+#define AUXMACRO1_PIN          GPIO_NUM_16
+#define AUXMACRO2_PIN          GPIO_NUM_14
+#define AUXMACRO3_PIN          GPIO_NUM_25
+#define AUXMACRO4_PIN          GPIO_NUM_26
+
+// Output pin
+#define AUXOUTPUT0_PIN          GPIO_NUM_27 // 1 - Spindle PWM
+#define AUXOUTPUT1_PIN          GPIO_NUM_27 // 1 - Spindle PWM
+#define AUXOUTPUT2_PIN          GPIO_NUM_27 // 1 - Spindle PWM
+#define AUXOUTPUT3_PIN          GPIO_NUM_4 // 4 - Coolant mist
 
 // Define driver spindle pins, on 10V Spindle module
 #if DRIVER_SPINDLE_ENABLE & SPINDLE_PWM
@@ -151,30 +157,9 @@
 #undef CONTROL_ENABLE
 #define CONTROL_ENABLE 0 // No control inputs
 
-// Slot #2
-
-#define AUXINPUT0_PIN           GPIO_NUM_2  // 1
-#define AUXINPUT1_PIN           GPIO_NUM_25 // 2
-#define AUXINPUT2_PIN           GPIO_NUM_39 // 3
-#define AUXINPUT3_PIN           GPIO_NUM_36 // 4
+// Input pin
+#define AUXINPUT0_PIN           GPIO_NUM_34  // 1
 
 #if PROBE_ENABLE
 #define PROBE_PIN               AUXINPUT0_PIN
-#endif
-
-// Slot #4
-
-#define AUXOUTPUT4_PIN          GPIO_NUM_12 // 4 or 8
-
-#ifdef ADD_SERIAL1
-#define SERIAL1_PORT
-#define UART1_RX_PIN            GPIO_NUM_15 // 3
-#define UART1_TX_PIN            GPIO_NUM_14 // 1
-#if MODBUS_ENABLE & MODBUS_RTU_DIR_ENABLED
-#define MODBUS_DIRECTION_PIN    GPIO_NUM_13 // 2
-#endif
-#else
-#define AUXOUTPUT5_PIN          GPIO_NUM_14 // 1 or 5
-#define AUXOUTPUT6_PIN          GPIO_NUM_13 // 2 or 6
-#define AUXOUTPUT7_PIN          GPIO_NUM_15 // 3 or 7
 #endif
